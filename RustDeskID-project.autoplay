@@ -1,0 +1,5740 @@
+<?xml version="1.0" encoding="iso-8859-1"?><DocumentData>
+<ProductVersion>9.2.0.0</ProductVersion>
+<ProductID>{ABF9EF9E-ECF6-4019-8A3E-908A6CFF4D1A}</ProductID>
+<IRProductName>AutoPlay Media Studio 9</IRProductName>
+<ProductType>Commercial</ProductType>
+<DocInfo>
+<Title/>
+<Author/>
+<Company/>
+<Copyright>Copyright © 2026 Classic IT Support</Copyright>
+<URL>https://www.classicit.net</URL>
+<Email>support@classicit.net</Email>
+<Comments/>
+<CreatedVersion>8.5.3.0 (Professional Edition Commercial)</CreatedVersion>
+<LastSavedVersion>9.2.0.0 (Professional Edition Commercial)</LastSavedVersion>
+</DocInfo>
+<ProjectInfo ToolTipStyle="0">
+<Office2007Theme Theme="2"/>
+<WindowStyles>
+<Width>700</Width>
+<Height>500</Height>
+<WindowTitle>Rustdesk User Database</WindowTitle>
+<WindowStyle>0</WindowStyle>
+<FillColor>0</FillColor>
+</WindowStyles>
+<WindowOptions>
+<Movable>1</Movable>
+<AlwaysOnTop>0</AlwaysOnTop>
+<Resizable>0</Resizable>
+<MinWidth>700</MinWidth>
+<MinHeight>500</MinHeight>
+</WindowOptions>
+<TransparentWindow>
+<TransparentImage/>
+<FitTrans>1</FitTrans>
+</TransparentWindow>
+<Icon>
+<UseCustomIcon>1</UseCustomIcon>
+<TaskbarVisibility>0</TaskbarVisibility>
+<IconFile>AutoPlay\Icons\rustid2.ico</IconFile>
+</Icon>
+<IntroVideo>
+<AllowClickToSkip>1</AllowClickToSkip>
+<MediaWidth>630</MediaWidth>
+<MediaHeight>425</MediaHeight>
+<WindowWidth>630</WindowWidth>
+<WindowHeight>425</WindowHeight>
+<BackgroundColor>16777215</BackgroundColor>
+<MediaMode>1</MediaMode>
+<WindowMode>0</WindowMode>
+<VideoFileName/>
+<UseIntroVideo>0</UseIntroVideo>
+<VideoType>0</VideoType>
+<UseBorder>0</UseBorder>
+<TitleBar>0</TitleBar>
+<TitleBarText/>
+</IntroVideo>
+<AudioBGMusic>
+<ShuffleMode>0</ShuffleMode>
+<Repeat>1</Repeat>
+<BackVolume>255</BackVolume>
+<EffectsVolume>255</EffectsVolume>
+<Tracks/>
+</AudioBGMusic>
+<Globals>
+<Script/>
+<BookMarks count="0">
+</BookMarks>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+</Globals>
+<Defaults>
+<StartupPage>_PageFirst</StartupPage>
+<MouseOverSoundDefault>AutoPlay\Audio\High1.ogg</MouseOverSoundDefault>
+<MouseClickSoundDefault>AutoPlay\Audio\Click1.ogg</MouseClickSoundDefault>
+<MemMngMethod>0</MemMngMethod>
+<UserPrivilegeLevel>0</UserPrivilegeLevel>
+</Defaults>
+<TargetMedia>
+<TargetMediaSize>4</TargetMediaSize>
+<CustomSize>0</CustomSize>
+</TargetMedia>
+<Group>
+<CurrentGrounp>0</CurrentGrounp>
+</Group>
+<ActionPlugins>
+<Plugin>Clipboard\Clipboard.lmd</Plugin>
+<Plugin>SQLite\SQLite.lmd</Plugin>
+</ActionPlugins>
+<TemplateInfo>
+<Name/>
+<Author/>
+<Contact/>
+<Web/>
+<Copyright>Copyright © 2024</Copyright>
+<Desc/>
+<Categories>General</Categories>
+<Picture/>
+</TemplateInfo>
+<ReadOrder>
+<RTLReadOrder>0</RTLReadOrder>
+</ReadOrder>
+<CodeSigning>
+<CodeSignApps>0</CodeSignApps>
+<CodeSignLocation>C:\Program Files (x86)\kSign\signtool.exe</CodeSignLocation>
+<CodeSignWithSHA256>0</CodeSignWithSHA256>
+<CodeSignCertificateFileSHA256>F:\Docs\Backup\Code_DigitalCert_key\2022self\citsCode.pfx</CodeSignCertificateFileSHA256>
+<CodeSignCertificatePasswordSHA256>
+am9obm5vNzc3</CodeSignCertificatePasswordSHA256>
+<CodeSignTimeStampURLSHA256>http://timestamp.comodoca.com</CodeSignTimeStampURLSHA256>
+<CodeSignArgumentsSHA256/>
+<CodeSignWithSHA1>1</CodeSignWithSHA1>
+<CodeSignTimeStampURLSHA1/>
+<CodeSignArgumentsSHA1/>
+<CodeSignSHA1CertificateToUse>1</CodeSignSHA1CertificateToUse>
+<CodeSignCertificateFileSHA1/>
+<CodeSignCertificatePasswordSHA1>
+</CodeSignCertificatePasswordSHA1>
+<CodeSignDescription>Classic IT Support Self Signed Cert</CodeSignDescription>
+<CodeSignDescriptionURL>https://www.classicit.net</CodeSignDescriptionURL>
+<CodeSignUsePFXCertificate>0</CodeSignUsePFXCertificate>
+<CodeSignAppendSecondSignature>0</CodeSignAppendSecondSignature>
+<CodeSignUseSHA512>0</CodeSignUseSHA512>
+<CodeSignCertificateSubject/>
+<CodeSignSecondTimestampURL/>
+<CodeSignCertificateThumbprint/>
+<CodeSignShowToolWindow>0</CodeSignShowToolWindow>
+</CodeSigning>
+<RuntimeSkin>
+<UseSkinFile>0</UseSkinFile>
+<SkinFilename/>
+<SkinSubStyle/>
+</RuntimeSkin>
+<Databases>
+<MySQL>0</MySQL>
+<SQLite3>1</SQLite3>
+<Oracle>0</Oracle>
+<ODBC>0</ODBC>
+<PostgreSQL>0</PostgreSQL>
+<Firebird>0</Firebird>
+<LuaSocket>0</LuaSocket>
+<LuaSec>0</LuaSec>
+<LuaFileSystem>0</LuaFileSystem>
+</Databases>
+<Event>
+<Name>On Startup</Name>
+<Args/>
+<Script>-- gets the applications running name
+nHandle = Application.GetWndHandle();
+		-- check to see if screen location save exists
+		iniexist = Registry.DoesKeyExist (HKEY_CURRENT_USER, "Software\\ClassicIT\\RustdeskID\\Screen");
+		if iniexist == true then
+				-- retrieve from INI file the saved app screen position
+				posx = Registry.GetValue(HKEY_CURRENT_USER, "Software\\ClassicIT\\RustdeskID\\Screen", "POSX", true);
+				posy = Registry.GetValue(HKEY_CURRENT_USER, "Software\\ClassicIT\\RustdeskID\\Screen", "POSY", true);
+				-- Set app position at the same location as when previously closed.
+				Window.SetPos(nHandle, posx, posy); 
+				else
+
+-- Set app to top right of screen
+sLocation = "TopRight";
+
+nHandle = Application.GetWndHandle();
+
+tWindowSize = Window.GetSize(nHandle);
+tScreenSize = System.GetDisplayInfo();
+
+if sLocation == "TopLeft" then
+nX = 0;
+nY = 0;
+elseif sLocation == "TopRight" then
+nX = tScreenSize.Width-tWindowSize.Width;
+nY = 0;
+elseif sLocation == "BottomLeft" then
+nX = 0;
+nY = tScreenSize.Height-tWindowSize.Height;
+elseif sLocation == "BottomRight" then
+nX = tScreenSize.Width-tWindowSize.Width;
+nY = tScreenSize.Height-tWindowSize.Height;
+end
+
+Window.SetPos(nHandle, nX-10, nY+150); 
+
+end</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>6</DesignCodeLine>
+<DesignCodeCol>71</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Shutdown</Name>
+<Args/>
+<Script>				-- gets current app position
+		tPos = Window.GetPos(Application.GetWndHandle());
+		
+			
+				--write this to registry
+				Registry.SetValue(HKEY_CURRENT_USER, "Software\\ClassicIT\\RustdeskID\\Screen", "POSX", tPos.X, REG_SZ);
+				Registry.SetValue(HKEY_CURRENT_USER, "Software\\ClassicIT\\RustdeskID\\Screen", "POSY", tPos.Y, REG_SZ);
+		
+		
+</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>9</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Size</Name>
+<Args>number e_WindowWidth, number e_WindowHeight, number e_PageWidth, number e_PageHeight, number e_Type</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Menu</Name>
+<Args>number e_ID, table e_ItemInfo</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<EXEResourceInfo>
+<ReplaceIcon>1</ReplaceIcon>
+<IconFilename>AutoPlay\Icons\rustid2.ico</IconFilename>
+<ReplaceVersionInfo>1</ReplaceVersionInfo>
+<FileVer1>2</FileVer1>
+<FileVer2>26</FileVer2>
+<FileVer3>9</FileVer3>
+<FileVer4>67</FileVer4>
+<ProductVer1>2</ProductVer1>
+<ProductVer2>26</ProductVer2>
+<ProductVer3>9</ProductVer3>
+<ProductVer4>67</ProductVer4>
+<Comments>Created with AutoPlay Media Studio</Comments>
+<Company>Classic IT Support</Company>
+<FileDescription>Rustdesk ID Database frontend</FileDescription>
+<LegalCopyright>Copyright © 2026 Classic IT Support</LegalCopyright>
+<LegalTrademarks>Classic IT Support</LegalTrademarks>
+<PrivateBuild>Only for technician use</PrivateBuild>
+<ProductName>Rustdesk User ID Database</ProductName>
+<SpecialBuild>John Klassek</SpecialBuild>
+</EXEResourceInfo>
+<HGuidelines/>
+<VGuidelines/>
+<MenuBar>
+<Enabled>0</Enabled>
+<UseIcons>0</UseIcons>
+<BitmapIconFile/>
+<TransColor format="hex">ffffff</TransColor>
+<MenuItem>
+<Text>Main Menu &amp;1</Text>
+<ID>100</ID>
+<Enabled>1</Enabled>
+<Checked>0</Checked>
+<SubMenu>
+<MenuItem>
+<Text>Sub Menu &amp;1</Text>
+<ID>101</ID>
+<Enabled>1</Enabled>
+<Checked>0</Checked>
+<SubMenu/>
+<IconID>-1</IconID>
+</MenuItem>
+<MenuItem>
+<Text>Sub Menu &amp;2</Text>
+<ID>102</ID>
+<Enabled>1</Enabled>
+<Checked>0</Checked>
+<SubMenu/>
+<IconID>-1</IconID>
+</MenuItem>
+</SubMenu>
+<IconID>-1</IconID>
+</MenuItem>
+<MenuItem>
+<Text>Main Menu &amp;2</Text>
+<ID>200</ID>
+<Enabled>1</Enabled>
+<Checked>0</Checked>
+<SubMenu>
+<MenuItem>
+<Text>Sub Menu &amp;1</Text>
+<ID>201</ID>
+<Enabled>1</Enabled>
+<Checked>0</Checked>
+<SubMenu/>
+<IconID>-1</IconID>
+</MenuItem>
+<MenuItem>
+<Text>Sub Menu &amp;2</Text>
+<ID>202</ID>
+<Enabled>1</Enabled>
+<Checked>0</Checked>
+<SubMenu/>
+<IconID>-1</IconID>
+</MenuItem>
+</SubMenu>
+<IconID>-1</IconID>
+</MenuItem>
+</MenuBar>
+</ProjectInfo>
+<Page>
+<Name>Login</Name>
+<InheritObs/>
+<InheritBG>Rustdesk</InheritBG>
+<Description/>
+<Keywords/>
+<Background>
+<Type>0</Type>
+<ImageStyle>0</ImageStyle>
+<TopColor>16711680</TopColor>
+<BottomColor>16777215</BottomColor>
+<UseCustomBackgroundSettings>1</UseCustomBackgroundSettings>
+<TransitionEffect/>
+<TransProps/>
+<NormalImage>
+<Filename/>
+</NormalImage>
+</Background>
+<Event>
+<Name>On Preload</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Show</Name>
+<Args/>
+<Script>xButton.SetVisible("xButtonRestore1", false);
+</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>2</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>45</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Close</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Timer</Name>
+<Args>number e_ID</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Audio</Name>
+<Args>number e_Channel, string e_State</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Size</Name>
+<Args>number e_WindowWidth, number e_WindowHeight, number e_PageWidth, number e_PageHeight, number e_Type</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Menu</Name>
+<Args>number e_ID, table e_ItemInfo</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Key</Name>
+<Args>number e_Key, table e_Modifiers</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Button</Name>
+<Args>number e_Type, number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Move</Name>
+<Args>number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Wheel</Name>
+<Args>table e_Flags, number e_Delta, number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Object>
+<Type>3</Type>
+<Name>Image3</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>15</Top>
+<Bottom>92</Bottom>
+<Left>101</Left>
+<Right>178</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<NormalImage>
+<Filename>AutoPlay\Images\rustdeskid4.png</Filename>
+<UseTransColor>0</UseTransColor>
+<TransClr>16777215</TransClr>
+<TransTolerance>10</TransTolerance>
+<Opacity>100</Opacity>
+<HTMode>0</HTMode>
+</NormalImage>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+</Object>
+<Object>
+<Type>3</Type>
+<Name>ImageCustomLogo3</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>0</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>133</Top>
+<Bottom>389</Bottom>
+<Left>216</Left>
+<Right>472</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<NormalImage>
+<Filename>AutoPlay\Images\Rustdesk2.png</Filename>
+<UseTransColor>0</UseTransColor>
+<TransClr>16777215</TransClr>
+<TransTolerance>10</TransTolerance>
+<Opacity>100</Opacity>
+<HTMode>0</HTMode>
+</NormalImage>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+</Object>
+<Object>
+<Type>20</Type>
+<Name>xButtonLogin1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>237</Top>
+<Bottom>272</Bottom>
+<Left>296</Left>
+<Right>377</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>Page.Jump("Rustdesk");</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script>xButton.SetVisible("xButtonRestore1", false);
+Page.Jump("Rustdesk");</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1</DesignCodeLine>
+<DesignCodeCol>22</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Hyperlink</Name>
+<Args>string e_Hyperlink</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Options>
+<Text>LOGIN</Text>
+<TextColor format="hex">000000</TextColor>
+<EnableMarkup>0</EnableMarkup>
+<ButtonImage/>
+<TextAlignment>2</TextAlignment>
+<ImageAlignment>0</ImageAlignment>
+<ImageTextRelation>3</ImageTextRelation>
+<Theme>6</Theme>
+<Style>0</Style>
+<State>0</State>
+<MouseOverSoundMode>0</MouseOverSoundMode>
+<MouseOverSound/>
+<MouseClickSoundMode>0</MouseClickSoundMode>
+<MouseClickSound/>
+</Options>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-16</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Object>
+<Object>
+<Type>20</Type>
+<Name>xButtonBackup2</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>0</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>0</Enabled>
+<ToolTip>Backup to another location</ToolTip>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>456</Top>
+<Bottom>479</Bottom>
+<Left>301</Left>
+<Right>376</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>		-- Confirm that the installation executable should be launched.
+result = Dialog.Message("Confirm", "Are you sure you would like to \nbackup Rustdesk db? \nPlease restart app when complete.", MB_YESNO, MB_ICONINFORMATION, MB_DEFBUTTON1);
+-- If the user clicked the Yes button.
+if (result == IDYES) then
+
+		-- close db connection.
+		--SQLite3Connection:close()
+		--SQLite3:close()
+		-- Create a backup of db
+		File.Copy("AutoPlay\\Docs\\citsrust.db", _SourceFolder .. "AutoPlay\\Backup\\citsrust.bak", true, true, false, true, BackUp01);
+		Application.Sleep(500);
+		-- File.Copy(_SourceDrive .."\\RustDeskID\\AutoPlay\\Docs\\citsrust.db", _SourceDrive .. "\\Classic\\CD_Root\\Setup\\Remote\\Rustdesk\\citsrust.db.bak", true, true, false, true, BackUp02);
+		File.Copy("AutoPlay\\Docs\\citsrust.db", _SourceDrive .. "\\SoftwareDev\\RustDeskID-project\\CD_Root\\AutoPlay\\Docs\\citsrust.db", true, true, false, true, BackUp03)
+		
+		File.ExploreFolder(_SourceDrive .. "\\RustdeskID\\AutoPlay\\Backup", SW_SHOWNORMAL);
+		
+					Application.Exit(AppExit1);
+					
+					else
+				Dialog.Message("Info", "The user chose not to \nbackup this time.", MB_OK, MB_ICONINFORMATION, MB_DEFBUTTON1);
+end</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>12</DesignCodeLine>
+<DesignCodeCol>23</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Hyperlink</Name>
+<Args>string e_Hyperlink</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Options>
+<Text>Backup</Text>
+<TextColor format="hex">000000</TextColor>
+<EnableMarkup>0</EnableMarkup>
+<ButtonImage/>
+<TextAlignment>2</TextAlignment>
+<ImageAlignment>0</ImageAlignment>
+<ImageTextRelation>3</ImageTextRelation>
+<Theme>6</Theme>
+<Style>0</Style>
+<State>0</State>
+<MouseOverSoundMode>0</MouseOverSoundMode>
+<MouseOverSound/>
+<MouseClickSoundMode>0</MouseClickSoundMode>
+<MouseClickSound/>
+</Options>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Object>
+<Object>
+<Type>3</Type>
+<Name>Image1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>2</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>374</Top>
+<Bottom>493</Bottom>
+<Left>46</Left>
+<Right>171</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>File.OpenURL("https://rust.classicit.net:4443/");</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script>File.OpenURL("https://rust.classicit.net:4443/");</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>49</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script>xButton.SetVisible("xButtonRestore1", true);</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>41</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<NormalImage>
+<Filename>AutoPlay\Images\classicitlogo.png</Filename>
+<UseTransColor>0</UseTransColor>
+<TransClr>16777215</TransClr>
+<TransTolerance>10</TransTolerance>
+<Opacity>100</Opacity>
+<HTMode>0</HTMode>
+</NormalImage>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+</Object>
+<Object>
+<Type>20</Type>
+<Name>xButtonRestore1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip>Only for administrative use.</ToolTip>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>377</Top>
+<Bottom>400</Bottom>
+<Left>576</Left>
+<Right>651</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>
+-- Confirm that the installation executable should be launched.
+result = Dialog.Message("Confirm", "Are you sure you would like to \nrestore the Rustdesk customer database? \nThe app will exit on completion \nand will need to be restarted.", MB_YESNO, MB_ICONINFORMATION, MB_DEFBUTTON1);
+-- If the user clicked the Yes button.
+if (result == IDYES) then		-- close db connection.
+		SQLite3Connection:close()
+		SQLite3:close()
+		Application.Sleep(500);
+			-- Restore backup file
+			File.Copy("AutoPlay\\Backup\\citsrustbak.db", _SourceDrive .. "RustdeskID\\AutoPlay\\Docs\\citsrust.db", true, true, false, true, BackUp01);
+			Application.Sleep(500);
+			Dialog.TimedMessage("Notice", "About to exit app", 1000, MB_ICONINFORMATION);
+			Application.Exit(AppExit1);
+		else
+Dialog.Message("Info", "The user chose not to \nrestore the Rustdesk customer DB.", MB_OK, MB_ICONINFORMATION, MB_DEFBUTTON1)
+end</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>9</DesignCodeLine>
+<DesignCodeCol>75</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Hyperlink</Name>
+<Args>string e_Hyperlink</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Options>
+<Text>Restore</Text>
+<TextColor format="hex">000000</TextColor>
+<EnableMarkup>0</EnableMarkup>
+<ButtonImage/>
+<TextAlignment>2</TextAlignment>
+<ImageAlignment>0</ImageAlignment>
+<ImageTextRelation>3</ImageTextRelation>
+<Theme>6</Theme>
+<Style>0</Style>
+<State>0</State>
+<MouseOverSoundMode>0</MouseOverSoundMode>
+<MouseOverSound/>
+<MouseClickSoundMode>0</MouseClickSoundMode>
+<MouseClickSound/>
+</Options>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Object>
+<Object>
+<Type>20</Type>
+<Name>xButtonExport1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>0</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>0</Enabled>
+<ToolTip>Only for administrative use.</ToolTip>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>456</Top>
+<Bottom>479</Bottom>
+<Left>460</Left>
+<Right>663</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>local sqlite3 = require("luasql.sqlite3")
+local db = sqlite3.open(_SourceFolder .. "\\AutoPlay\\Docs\\citsrust.db")
+local file = io.open(_SourceFolder .. "\\AutoPlay\\Docs\\export_data.csv", "w")
+
+-- Write CSV header
+file:write("id,Name,RustID\n")
+
+-- Fetch and write rows
+for row in db:nrows("SELECT * FROM RUSTDESK") do
+    file:write(string.format("%s,%s,%s\n", row.id, row.name, row.RustID))
+end
+
+file:close()
+db:close()
+print("Export complete!")</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>14</DesignCodeLine>
+<DesignCodeCol>25</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Hyperlink</Name>
+<Args>string e_Hyperlink</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Options>
+<Text>Export DB beta</Text>
+<TextColor format="hex">000000</TextColor>
+<EnableMarkup>0</EnableMarkup>
+<ButtonImage/>
+<TextAlignment>2</TextAlignment>
+<ImageAlignment>0</ImageAlignment>
+<ImageTextRelation>3</ImageTextRelation>
+<Theme>6</Theme>
+<Style>0</Style>
+<State>0</State>
+<MouseOverSoundMode>0</MouseOverSoundMode>
+<MouseOverSound/>
+<MouseClickSoundMode>0</MouseClickSoundMode>
+<MouseClickSound/>
+</Options>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Object>
+<Object>
+<Type>20</Type>
+<Name>xButtonExportDBbeta2</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>0</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>0</Enabled>
+<ToolTip>Only for administrative use.</ToolTip>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>413</Top>
+<Bottom>436</Bottom>
+<Left>454</Left>
+<Right>657</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>local sqlite = require("luasql.sqlite3")
+local db = sqlite.open(_SourceFolder .. "\\AutoPlay\\Docs\\citsrust.db")
+-- SQLite3Connection, err = SQLite3:connect(_SourceFolder .. "\\AutoPlay\\Docs\\citsrust.db");
+-- SQLite3Connection:execute("CREATE TABLE IF NOT EXISTS RUSTDESK (id INTEGER PRIMARY KEY, Name TEXT, RustID TEXT)");
+local csvFile = io.open(_SourceFolder .. "\\AutoPlay\\Docs\\export_data.csv", "w")
+
+-- Write CSV header
+csvFile:write("column1,column2,column3,\n")
+
+for row in db:nrows("SELECT * FROM RUSTDESK") do
+    csvFile:write(string.format("%s,%s,%s\n", row.id, row.Name, row.RustID))
+end
+
+csvFile:close()
+db:close()</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>3</DesignCodeLine>
+<DesignCodeCol>3</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Hyperlink</Name>
+<Args>string e_Hyperlink</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Options>
+<Text>Export DB beta 2</Text>
+<TextColor format="hex">000000</TextColor>
+<EnableMarkup>0</EnableMarkup>
+<ButtonImage/>
+<TextAlignment>2</TextAlignment>
+<ImageAlignment>0</ImageAlignment>
+<ImageTextRelation>3</ImageTextRelation>
+<Theme>6</Theme>
+<Style>0</Style>
+<State>0</State>
+<MouseOverSoundMode>0</MouseOverSoundMode>
+<MouseOverSound/>
+<MouseClickSoundMode>0</MouseClickSoundMode>
+<MouseClickSound/>
+</Options>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Object>
+<Object>
+<Type>3</Type>
+<Name>Image2</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>34</Top>
+<Bottom>72</Bottom>
+<Left>191</Left>
+<Right>609</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1046834537</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1047488884</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1046832239</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<NormalImage>
+<Filename>AutoPlay\Images\rduserdb2.png</Filename>
+<UseTransColor>0</UseTransColor>
+<TransClr>16777215</TransClr>
+<TransTolerance>10</TransTolerance>
+<Opacity>100</Opacity>
+<HTMode>0</HTMode>
+</NormalImage>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+</Object>
+<HGuidelines>
+<Guideline>
+<pt>-346</pt>
+<locked>0</locked>
+</Guideline>
+</HGuidelines>
+<VGuidelines/>
+</Page>
+<Page>
+<Name>Rustdesk</Name>
+<InheritObs/>
+<InheritBG/>
+<Description/>
+<Keywords/>
+<Background>
+<Type>2</Type>
+<ImageStyle>0</ImageStyle>
+<TopColor>16769988</TopColor>
+<BottomColor>13540096</BottomColor>
+<UseCustomBackgroundSettings>1</UseCustomBackgroundSettings>
+<TransitionEffect/>
+<TransProps/>
+<NormalImage>
+<Filename>AutoPlay\Images\db-wallpaper2.jpg</Filename>
+</NormalImage>
+</Background>
+<Event>
+<Name>On Preload</Name>
+<Args/>
+<Script>-- Get user's Documents Folder.
+My_Docs = Shell.GetFolder(SHF_MYDOCUMENTS);
+
+-- Open the database
+
+local sqlite3 = require("luasql.sqlite3");
+
+SQLite3Connection, err = SQLite3:connect(_SourceFolder .. "\\AutoPlay\\Docs\\citsrust.db");
+
+SQLite3Connection:execute("CREATE TABLE IF NOT EXISTS RUSTDESK (id INTEGER PRIMARY KEY, Name TEXT, RustID TEXT)");</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>2</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Show</Name>
+<Args/>
+<Script>-- Hide Hourglass.
+Image.SetVisible("ImageHourGlass4", false);
+
+-- Page.SetFocus("xButtonSearch4"); -- still a work in progress when entering search, this button still doesn't respond as desired .. solution pending
+
+
+-- Function to search and display all rows from the database
+function SearchAll()
+    -- Clear all items from the ListBox before adding new ones
+    ListBox.DeleteItem("ListBox1", LB_ALLITEMS)
+
+    -- Retrieve a cursor
+    local SQLite3Cursor = SQLite3Connection:execute("SELECT id, Name FROM RUSTDESK")
+    
+    if SQLite3Cursor then
+        -- Fetch all rows
+        local row = SQLite3Cursor:fetch({}, "a")
+        while row do
+            ListBox.AddItem("ListBox1", row.Name, row.id)
+            row = SQLite3Cursor:fetch(row, "a") -- Get the next row
+        end
+        SQLite3Cursor:close()
+    else
+        print("Error in SQL Search All")
+    end  
+end
+
+
+
+-- Function to search and display filtered rows from the database
+function Search(sch)
+    -- Clear all items from the ListBox before adding new ones
+    ListBox.DeleteItem("ListBox1", LB_ALLITEMS)
+
+    -- Prepare the search query
+    local query = string.format("SELECT id, Name FROM RUSTDESK WHERE id LIKE '%%%s%%' OR Name LIKE '%%%s%%'", sch, sch)
+    local SQLite3Cursor = SQLite3Connection:execute(query)
+
+    if SQLite3Cursor then
+        -- Fetch all rows
+        local row = SQLite3Cursor:fetch({}, "a")
+        while row do
+            ListBox.AddItem("ListBox1", row.Name, row.id)
+            row = SQLite3Cursor:fetch(row, "a") -- Get the next row
+        end
+        SQLite3Cursor:close()
+    else
+        print("Error in search")
+    end
+end
+
+-- Call the function to perform the initial search
+SearchAll()
+
+
+</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1</DesignCodeLine>
+<DesignCodeCol>37</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Close</Name>
+<Args/>
+<Script>		-- close db connection.
+		--SQLite3Connection:close()
+		--SQLite3:close()
+		--Application.Sleep(500);
+		-- Create a backup of db -- this doesn't work because it is not actuated when exiting app, only when closing page during runtime.
+		--File.Copy("AutoPlay\\Docs\\citsrust.db", _SourceDrive .. "\\RustdeskID\\AutoPlay\\Backup\\citsrust.bak", true, true, false, true, BackUp05);
+		--Application.Sleep(500);
+
+		-- Below removed for public version
+		--File.Copy("AutoPlay\\Docs\\citsrust.db", _SourceDrive .. "\\SoftwareDev\\RustDeskID-project\\CD_Root\\AutoPlay\\Backup\\citsrust1.db", true, true, false, true, BackUp06)</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>6</DesignCodeLine>
+<DesignCodeCol>4</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Timer</Name>
+<Args>number e_ID</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Audio</Name>
+<Args>number e_Channel, string e_State</Args>
+<Script>    -- Loop through the rows of the selected data
+    for nRow = 1, tSelected.Rows do  
+        -- Get the current row data
+        local row = tSelected.Data[nRow]
+        
+        -- Add the 'Name' and 'id' from the current row to the ListBox
+        ListBox.AddItem("ListBox1", row["Name"], row["id"])
+    end
+         
+    -- Query the database to count the number of records in the 'RUSTDESK' table
+    local tbResults = db:execute("SELECT COUNT(*) AS COUNT FROM RUSTDESK")
+    Input.SetText("Input6", tbResults.Data[1]["COUNT"])</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>9</DesignCodeLine>
+<DesignCodeCol>74</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Size</Name>
+<Args>number e_WindowWidth, number e_WindowHeight, number e_PageWidth, number e_PageHeight, number e_Type</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Menu</Name>
+<Args>number e_ID, table e_ItemInfo</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Key</Name>
+<Args>number e_Key, table e_Modifiers</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Button</Name>
+<Args>number e_Type, number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Move</Name>
+<Args>number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Wheel</Name>
+<Args>table e_Flags, number e_Delta, number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Object>
+<Type>3</Type>
+<Name>Image4</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>96</Top>
+<Bottom>198</Bottom>
+<Left>60</Left>
+<Right>643</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1080487936</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>23668</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>774778469</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<NormalImage>
+<Filename>AutoPlay\Images\alphabox2.png</Filename>
+<UseTransColor>0</UseTransColor>
+<TransClr>16777215</TransClr>
+<TransTolerance>10</TransTolerance>
+<Opacity>100</Opacity>
+<HTMode>0</HTMode>
+</NormalImage>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+</Object>
+<Object>
+<Type>1</Type>
+<Name>Label5</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>96</Top>
+<Bottom>119</Bottom>
+<Left>384</Left>
+<Right>461</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Text>
+<Body>Rustdesk ID:</Body>
+<NormalColor>16777215</NormalColor>
+<HighlightColor>16777215</HighlightColor>
+<MouseDownColor>16777215</MouseDownColor>
+<DisabledColor>12632256</DisabledColor>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<Alignment>0</Alignment>
+<Orientation>0</Orientation>
+<AutoSize>1</AutoSize>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+<OriginalRect>
+<Top>96</Top>
+<Bottom>119</Bottom>
+<Left>384</Left>
+<Right>461</Right>
+</OriginalRect>
+</Text>
+</Object>
+<Object>
+<Type>3</Type>
+<Name>Image3</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>15</Top>
+<Bottom>92</Bottom>
+<Left>101</Left>
+<Right>178</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>Page.Jump("Login");</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>19</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<NormalImage>
+<Filename>AutoPlay\Images\rustdeskid4.png</Filename>
+<UseTransColor>0</UseTransColor>
+<TransClr>16777215</TransClr>
+<TransTolerance>10</TransTolerance>
+<Opacity>100</Opacity>
+<HTMode>0</HTMode>
+</NormalImage>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+</Object>
+<Object>
+<Type>3</Type>
+<Name>ImageHourGlass4</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>191</Top>
+<Bottom>396</Bottom>
+<Left>511</Left>
+<Right>654</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>53</DesignCodeLine>
+<DesignCodeCol>796092274</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>3487026</DesignCodeLine>
+<DesignCodeCol>1953396079</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>54</DesignCodeLine>
+<DesignCodeCol>1934965770</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>53</DesignCodeLine>
+<DesignCodeCol>1869873203</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<NormalImage>
+<Filename>AutoPlay\Images\hourglass.png</Filename>
+<UseTransColor>0</UseTransColor>
+<TransClr>16777215</TransClr>
+<TransTolerance>10</TransTolerance>
+<Opacity>100</Opacity>
+<HTMode>0</HTMode>
+</NormalImage>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+</Object>
+<Object>
+<Type>7</Type>
+<Name>InputName2</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>113</Top>
+<Bottom>136</Bottom>
+<Left>132</Left>
+<Right>379</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Key</Name>
+<Args>number e_Key, table e_Modifiers</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Focus</Name>
+<Args/>
+<Script>				--Dialog.TimedMessage("Notice", "Copied to Clipboard", 1000, MB_ICONNONE);
+				nData = Input.GetText("InputName2")
+				Clipboard.CopyText(nData);
+				</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>2</DesignCodeLine>
+<DesignCodeCol>4</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Char</Name>
+<Args>number e_Char, table e_Modifiers</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Text>
+<Body> </Body>
+<TextColor>3355443</TextColor>
+<BackgroundColor>16777215</BackgroundColor>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<Alignment>0</Alignment>
+<RightToLeftReadingOrder>0</RightToLeftReadingOrder>
+</Text>
+<Box>
+<BorderStyle>1</BorderStyle>
+<VerticalScrollbar>1</VerticalScrollbar>
+<HorizontalScrollbar>0</HorizontalScrollbar>
+<Style>0</Style>
+<Mode>0</Mode>
+<Mask/>
+<MaskSymbol> </MaskSymbol>
+<MaskRetMode>0</MaskRetMode>
+<ReadOnly>0</ReadOnly>
+</Box>
+</Object>
+<Object>
+<Type>1</Type>
+<Name>LabelName1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip>Client details    </ToolTip>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>96</Top>
+<Bottom>119</Bottom>
+<Left>137</Left>
+<Right>181</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>5857125</DesignCodeLine>
+<DesignCodeCol>3678319</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1079861248</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>5857125</DesignCodeLine>
+<DesignCodeCol>1079910400</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1079861248</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Text>
+<Body>Name:</Body>
+<NormalColor>16777215</NormalColor>
+<HighlightColor>16777215</HighlightColor>
+<MouseDownColor>16777215</MouseDownColor>
+<DisabledColor>12632256</DisabledColor>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<Alignment>0</Alignment>
+<Orientation>0</Orientation>
+<AutoSize>1</AutoSize>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+<OriginalRect>
+<Top>96</Top>
+<Bottom>119</Bottom>
+<Left>137</Left>
+<Right>181</Right>
+</OriginalRect>
+</Text>
+</Object>
+<Object>
+<Type>7</Type>
+<Name>Input1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>113</Top>
+<Bottom>136</Bottom>
+<Left>84</Left>
+<Right>128</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Key</Name>
+<Args>number e_Key, table e_Modifiers</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Focus</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Char</Name>
+<Args>number e_Char, table e_Modifiers</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Text>
+<Body/>
+<TextColor>3355443</TextColor>
+<BackgroundColor>16777215</BackgroundColor>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<Alignment>0</Alignment>
+<RightToLeftReadingOrder>0</RightToLeftReadingOrder>
+</Text>
+<Box>
+<BorderStyle>1</BorderStyle>
+<VerticalScrollbar>1</VerticalScrollbar>
+<HorizontalScrollbar>0</HorizontalScrollbar>
+<Style>0</Style>
+<Mode>0</Mode>
+<Mask/>
+<MaskSymbol> </MaskSymbol>
+<MaskRetMode>0</MaskRetMode>
+<ReadOnly>1</ReadOnly>
+</Box>
+</Object>
+<Object>
+<Type>1</Type>
+<Name>LabelDB2</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip>Database ID   </ToolTip>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>96</Top>
+<Bottom>119</Bottom>
+<Left>84</Left>
+<Right>125</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>5857125</DesignCodeLine>
+<DesignCodeCol>46</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1079779328</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>168640108</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1835991094</DesignCodeLine>
+<DesignCodeCol>46</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Text>
+<Body>DB ID:</Body>
+<NormalColor>16777215</NormalColor>
+<HighlightColor>16777215</HighlightColor>
+<MouseDownColor>16777215</MouseDownColor>
+<DisabledColor>12632256</DisabledColor>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<Alignment>0</Alignment>
+<Orientation>0</Orientation>
+<AutoSize>1</AutoSize>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+<OriginalRect>
+<Top>96</Top>
+<Bottom>119</Bottom>
+<Left>84</Left>
+<Right>125</Right>
+</OriginalRect>
+</Text>
+</Object>
+<Object>
+<Type>9</Type>
+<Name>ListBox1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>167</Top>
+<Bottom>428</Bottom>
+<Left>192</Left>
+<Right>505</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Double-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Select</Name>
+<Args/>
+<Script>-- Get the selected item from the ListBox
+local xSel = ListBox.GetSelected("ListBox1")
+
+-- Check if an item is selected
+if xSel then
+    -- Get the item data (ID) of the selected item
+    local nData = ListBox.GetItemData("ListBox1", xSel[1])
+    local n = tonumber(nData)  -- Convert the data to a number
+
+    -- If the data is a valid number, perform the query
+    if type(n) == "number" then
+         
+    local SQLite3Cursor = SQLite3Connection:execute("SELECT * FROM RUSTDESK WHERE id ="..n)
+    
+    if SQLite3Cursor then
+        -- Fetch all rows
+        local row = SQLite3Cursor:fetch({}, "a")
+        while row do
+        
+            Input.SetText("InputName2", row.Name)
+            Input.SetText("Input1", tostring(row.id))
+            Input.SetText("Input3", tostring(row.RustID))
+            
+            row = SQLite3Cursor:fetch(row, "a") -- Get the next row
+        end
+        SQLite3Cursor:close()
+    else
+        print("Error executing SQL query in SearchAll")
+    end
+        
+          
+        
+    else
+        -- Handle the case where the selected item ID is not a valid number (optional)
+        -- Add error handling or message here if necessary
+    end
+else
+    -- Handle the case where no item is selected in the ListBox (optional)
+    -- Add error handling or message here if necessary
+end
+</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>21</DesignCodeLine>
+<DesignCodeCol>55</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Key</Name>
+<Args>number e_Key, table e_Modifiers</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Focus</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Check</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Text>
+<TextColor>2147483647</TextColor>
+<BackgroundColor>16777215</BackgroundColor>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Text>
+<Window>
+<BorderStyle>1</BorderStyle>
+<VerticalScrollbar>1</VerticalScrollbar>
+<HorizontalScrollbar>0</HorizontalScrollbar>
+<Sort>1</Sort>
+<MultipleSelect>0</MultipleSelect>
+<ReadOrder>0</ReadOrder>
+<CheckList>0</CheckList>
+</Window>
+<ListBoxItems/>
+</Object>
+<Object>
+<Type>20</Type>
+<Name>xButtonSearch4</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip>Search   </ToolTip>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>140</Top>
+<Bottom>163</Bottom>
+<Left>410</Left>
+<Right>506</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>Search(Input.GetText("InputSearchAll4"))</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>4</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Hyperlink</Name>
+<Args>string e_Hyperlink</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Options>
+<Text>Search All</Text>
+<TextColor format="hex">000000</TextColor>
+<EnableMarkup>0</EnableMarkup>
+<ButtonImage>AutoPlay\Images\gearsm.png</ButtonImage>
+<TextAlignment>2</TextAlignment>
+<ImageAlignment>0</ImageAlignment>
+<ImageTextRelation>3</ImageTextRelation>
+<Theme>6</Theme>
+<Style>0</Style>
+<State>0</State>
+<MouseOverSoundMode>0</MouseOverSoundMode>
+<MouseOverSound/>
+<MouseClickSoundMode>0</MouseClickSoundMode>
+<MouseClickSound/>
+</Options>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Object>
+<Object>
+<Type>20</Type>
+<Name>xButton7</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip>Insert new entry    </ToolTip>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>138</Top>
+<Bottom>161</Bottom>
+<Left>544</Left>
+<Right>619</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>-- Inserts a new record into the TEST table with a text and an email, automatically 
+
+local text = Input.GetText("InputName2")
+local RustID = Input.GetText("Input3")
+
+SQLite3Connection:execute("INSERT INTO RUSTDESK VALUES(NULL, '"..text.."','"..RustID.."')");
+
+SearchAll();
+
+</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>9</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Hyperlink</Name>
+<Args>string e_Hyperlink</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Options>
+<Text>Insert</Text>
+<TextColor format="hex">000000</TextColor>
+<EnableMarkup>0</EnableMarkup>
+<ButtonImage/>
+<TextAlignment>2</TextAlignment>
+<ImageAlignment>0</ImageAlignment>
+<ImageTextRelation>3</ImageTextRelation>
+<Theme>6</Theme>
+<Style>0</Style>
+<State>0</State>
+<MouseOverSoundMode>0</MouseOverSoundMode>
+<MouseOverSound/>
+<MouseClickSoundMode>0</MouseClickSoundMode>
+<MouseClickSound/>
+</Options>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Object>
+<Object>
+<Type>7</Type>
+<Name>Input3</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>113</Top>
+<Bottom>136</Bottom>
+<Left>383</Left>
+<Right>538</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Key</Name>
+<Args>number e_Key, table e_Modifiers</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Focus</Name>
+<Args/>
+<Script>		-- copy to clipboard	
+		dData = Input.GetText("Input3")
+		Clipboard.CopyText(dData);
+	</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>22</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Char</Name>
+<Args>number e_Char, table e_Modifiers</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Text>
+<Body/>
+<TextColor>3355443</TextColor>
+<BackgroundColor>16777215</BackgroundColor>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<Alignment>0</Alignment>
+<RightToLeftReadingOrder>0</RightToLeftReadingOrder>
+</Text>
+<Box>
+<BorderStyle>1</BorderStyle>
+<VerticalScrollbar>1</VerticalScrollbar>
+<HorizontalScrollbar>0</HorizontalScrollbar>
+<Style>0</Style>
+<Mode>0</Mode>
+<Mask/>
+<MaskSymbol> </MaskSymbol>
+<MaskRetMode>0</MaskRetMode>
+<ReadOnly>0</ReadOnly>
+</Box>
+</Object>
+<Object>
+<Type>20</Type>
+<Name>xButtonModify8</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip>Modify Rustdesk entry    </ToolTip>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>112</Top>
+<Bottom>135</Bottom>
+<Left>545</Left>
+<Right>620</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>
+-- Inserts or replaces a record in the TEST table with a specified.
+
+local nId = Input.GetText("Input1");
+local text = Input.GetText("InputName2")
+local RustID = Input.GetText("Input3")
+
+SQLite3Connection:execute("INSERT or REPLACE INTO RUSTDESK VALUES('"..nId.."','"..text.."','"..RustID.."')");
+
+
+SearchAll();</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>10</DesignCodeLine>
+<DesignCodeCol>12</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Hyperlink</Name>
+<Args>string e_Hyperlink</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Options>
+<Text>Modify</Text>
+<TextColor format="hex">000000</TextColor>
+<EnableMarkup>0</EnableMarkup>
+<ButtonImage/>
+<TextAlignment>2</TextAlignment>
+<ImageAlignment>0</ImageAlignment>
+<ImageTextRelation>3</ImageTextRelation>
+<Theme>6</Theme>
+<Style>0</Style>
+<State>0</State>
+<MouseOverSoundMode>0</MouseOverSoundMode>
+<MouseOverSound/>
+<MouseClickSoundMode>0</MouseClickSoundMode>
+<MouseClickSound/>
+</Options>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Object>
+<Object>
+<Type>20</Type>
+<Name>xButtonDelete9</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip>Delete Rustdesk user    </ToolTip>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>398</Top>
+<Bottom>421</Bottom>
+<Left>544</Left>
+<Right>619</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>-- Confirm that the installation executable should be launched.
+result = Dialog.Message("Confirm", "Are you sure you would like to \ndelete this Rustdesk entry?", MB_YESNO, MB_ICONINFORMATION, MB_DEFBUTTON1);
+-- If the user clicked the Yes button.
+if (result == IDYES) then
+
+-- Get the selected item from the ListBox
+local xSel = ListBox.GetSelected("ListBox1")
+
+-- Check if an item is selected
+if xSel then
+    -- Get the item data (ID) of the selected item
+    local nData = ListBox.GetItemData("ListBox1", xSel[1])
+    local n = tonumber(nData)  -- Convert the data to a number
+
+    -- If the data is a valid number, perform the delete operation
+    if type(n) == "number" then
+    
+        -- Delete the row from the database based on the selected ID
+
+         SQLite3Connection:execute("DELETE FROM RUSTDESK WHERE id ="..n)
+        
+        
+        -- Refresh the ListBox after deletion
+        SearchAll()
+    else
+        -- Handle the case where the selected item ID is not a valid number (optional)
+        -- Add error handling or message here if necessary
+              
+    end
+else
+    -- Handle the case where no item is selected in the ListBox (optional)
+    -- Add error handling or message here if necessary
+end
+else
+Dialog.Message("Info", "The user chose not to \ndelete this entry.", MB_OK, MB_ICONINFORMATION, MB_DEFBUTTON1)
+end
+</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>19</DesignCodeLine>
+<DesignCodeCol>56</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Hyperlink</Name>
+<Args>string e_Hyperlink</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Options>
+<Text>Delete</Text>
+<TextColor format="hex">000000</TextColor>
+<EnableMarkup>0</EnableMarkup>
+<ButtonImage>AutoPlay\Images\gearsm.png</ButtonImage>
+<TextAlignment>2</TextAlignment>
+<ImageAlignment>0</ImageAlignment>
+<ImageTextRelation>3</ImageTextRelation>
+<Theme>6</Theme>
+<Style>0</Style>
+<State>0</State>
+<MouseOverSoundMode>0</MouseOverSoundMode>
+<MouseOverSound/>
+<MouseClickSoundMode>0</MouseClickSoundMode>
+<MouseClickSound/>
+</Options>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Object>
+<Object>
+<Type>7</Type>
+<Name>InputSearchAll4</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip>Enter search here</ToolTip>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>140</Top>
+<Bottom>163</Bottom>
+<Left>192</Left>
+<Right>403</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Key</Name>
+<Args>number e_Key, table e_Modifiers</Args>
+<Script>-- e_Key is a built in variable that gets generated by the On Key event.
+-- 13 is the virtual key code value for the [Enter] key.
+
+if e_Key == 13 then
+    -- Enter the input by the user:
+    Search(Input.GetText("InputSearchAll4"))
+end
+
+</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>4</DesignCodeLine>
+<DesignCodeCol>16</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Focus</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Char</Name>
+<Args>number e_Char, table e_Modifiers</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Text>
+<Body> </Body>
+<TextColor>3355443</TextColor>
+<BackgroundColor>15596543</BackgroundColor>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<Alignment>0</Alignment>
+<RightToLeftReadingOrder>0</RightToLeftReadingOrder>
+</Text>
+<Box>
+<BorderStyle>1</BorderStyle>
+<VerticalScrollbar>1</VerticalScrollbar>
+<HorizontalScrollbar>0</HorizontalScrollbar>
+<Style>0</Style>
+<Mode>0</Mode>
+<Mask/>
+<MaskSymbol> </MaskSymbol>
+<MaskRetMode>0</MaskRetMode>
+<ReadOnly>0</ReadOnly>
+</Box>
+</Object>
+<Object>
+<Type>3</Type>
+<Name>Image1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>2</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>374</Top>
+<Bottom>493</Bottom>
+<Left>46</Left>
+<Right>171</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>File.OpenURL("https://rust.classicit.net:4443/");</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>24</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<NormalImage>
+<Filename>AutoPlay\Images\classicitlogo.png</Filename>
+<UseTransColor>0</UseTransColor>
+<TransClr>16777215</TransClr>
+<TransTolerance>10</TransTolerance>
+<Opacity>100</Opacity>
+<HTMode>0</HTMode>
+</NormalImage>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+</Object>
+<Object>
+<Type>7</Type>
+<Name>InputPW5</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>453</Top>
+<Bottom>476</Bottom>
+<Left>356</Left>
+<Right>504</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Key</Name>
+<Args>number e_Key, table e_Modifiers</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Focus</Name>
+<Args/>
+<Script>			Dialog.TimedMessage("Notice", "Copied to Clipboard", 1000, MB_ICONINFORMATION);
+				pData = Input.GetText("InputPW5")
+				Clipboard.CopyText(pData);
+				--Dialog.TimedMessage("Notice", "Copied to Clipboard", 1000, MB_ICONNONE);</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>24</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Char</Name>
+<Args>number e_Char, table e_Modifiers</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Text>
+<Body>&gt;6fcad%1e3Cd04E0ed3^5#&gt;</Body>
+<TextColor>12632256</TextColor>
+<BackgroundColor>16777215</BackgroundColor>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<Alignment>0</Alignment>
+<RightToLeftReadingOrder>0</RightToLeftReadingOrder>
+</Text>
+<Box>
+<BorderStyle>1</BorderStyle>
+<VerticalScrollbar>1</VerticalScrollbar>
+<HorizontalScrollbar>0</HorizontalScrollbar>
+<Style>0</Style>
+<Mode>1</Mode>
+<Mask/>
+<MaskSymbol> </MaskSymbol>
+<MaskRetMode>0</MaskRetMode>
+<ReadOnly>1</ReadOnly>
+</Box>
+</Object>
+<Object>
+<Type>20</Type>
+<Name>xButtonClear1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip>Clear the input fields    </ToolTip>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>164</Top>
+<Bottom>187</Bottom>
+<Left>544</Left>
+<Right>619</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>-- Inserts a blank in all fields
+
+Input.SetText("Input1", "");
+Input.SetText("InputName2", " ");
+Input.SetText("Input3", "");
+Input.SetText("InputSearchAll4", "");
+Search(Input.GetText("InputSearchAll4"))</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>6</DesignCodeLine>
+<DesignCodeCol>14</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Hyperlink</Name>
+<Args>string e_Hyperlink</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Options>
+<Text>Clear</Text>
+<TextColor format="hex">000000</TextColor>
+<EnableMarkup>0</EnableMarkup>
+<ButtonImage/>
+<TextAlignment>2</TextAlignment>
+<ImageAlignment>0</ImageAlignment>
+<ImageTextRelation>3</ImageTextRelation>
+<Theme>6</Theme>
+<Style>0</Style>
+<State>0</State>
+<MouseOverSoundMode>0</MouseOverSoundMode>
+<MouseOverSound/>
+<MouseClickSoundMode>0</MouseClickSoundMode>
+<MouseClickSound/>
+</Options>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Object>
+<Object>
+<Type>20</Type>
+<Name>xButtonBackup1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>0</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>0</Enabled>
+<ToolTip>Backup SQLite3 database</ToolTip>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>368</Top>
+<Bottom>391</Bottom>
+<Left>544</Left>
+<Right>619</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>-- Confirm that the installation executable should be launched.
+result = Dialog.Message("Confirm", "Are you sure you would like to \nbackup this Rustdesk SQLite database?", MB_YESNO, MB_ICONINFORMATION, MB_DEFBUTTON1);
+-- If the user clicked the Yes button.
+if (result == IDYES) then
+
+		File.Copy(_SourceDrive .."\\RustDeskID\\AutoPlay\\Docs\\citsrust.db", _SourceDrive .. "\\RustDeskID\\AutoPlay\\Backup\\citsrust.db.back", true, true, false, true, BackUp01);
+		-- File.Copy("AutoPlay\\Docs\\citsrust.db", "AutoPlay\\Backup\\citsrust.db", true, true, false, true, BackUp01);
+		--File.Copy("citsrust.db", _SourceDrive.."\\SoftwareDev\\aaa-sqlite\\SQLite3\\CD_Root\\citsrust.db", true, true, false, true);
+		Application.Sleep(500);
+		Dialog.Message("Info", "The SQLite Rustdesk database \nhas successfully been backed up.", MB_OK, MB_ICONINFORMATION, MB_DEFBUTTON1)
+else
+Dialog.Message("Info", "The user chose not to \nbackup at this time.", MB_OK, MB_ICONINFORMATION, MB_DEFBUTTON1)
+end
+-- the feature above has been moved/amended and is working on main page On Close
+-- we had to close the database connection before able to copy the citsrust.db file.</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>14</DesignCodeLine>
+<DesignCodeCol>84</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Hyperlink</Name>
+<Args>string e_Hyperlink</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Options>
+<Text>Backup</Text>
+<TextColor format="hex">000000</TextColor>
+<EnableMarkup>0</EnableMarkup>
+<ButtonImage/>
+<TextAlignment>2</TextAlignment>
+<ImageAlignment>0</ImageAlignment>
+<ImageTextRelation>3</ImageTextRelation>
+<Theme>6</Theme>
+<Style>0</Style>
+<State>0</State>
+<MouseOverSoundMode>0</MouseOverSoundMode>
+<MouseOverSound/>
+<MouseClickSoundMode>0</MouseClickSoundMode>
+<MouseClickSound/>
+</Options>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Object>
+<Object>
+<Type>20</Type>
+<Name>xButtonLogout1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>0</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>0</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>277</Top>
+<Bottom>300</Bottom>
+<Left>58</Left>
+<Right>133</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>		-- close db connection.
+		SQLite3Connection:close()
+		SQLite3:close()
+		-- Create a backup of db
+		File.Copy(_SourceDrive .."\\RustDeskID\\AutoPlay\\Docs\\citsrust.db", _SourceDrive .. "\\RustDeskID\\AutoPlay\\Docs\\citsrust.bak", true, true, false, true, BackUp01);
+
+Page.Jump("Login");</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>6</DesignCodeLine>
+<DesignCodeCol>19</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Hyperlink</Name>
+<Args>string e_Hyperlink</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Options>
+<Text>Log out</Text>
+<TextColor format="hex">000000</TextColor>
+<EnableMarkup>0</EnableMarkup>
+<ButtonImage/>
+<TextAlignment>2</TextAlignment>
+<ImageAlignment>0</ImageAlignment>
+<ImageTextRelation>3</ImageTextRelation>
+<Theme>6</Theme>
+<Style>0</Style>
+<State>0</State>
+<MouseOverSoundMode>0</MouseOverSoundMode>
+<MouseOverSound/>
+<MouseClickSoundMode>0</MouseClickSoundMode>
+<MouseClickSound/>
+</Options>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Object>
+<Object>
+<Type>7</Type>
+<Name>InputImport5</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>453</Top>
+<Bottom>476</Bottom>
+<Left>194</Left>
+<Right>340</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Key</Name>
+<Args>number e_Key, table e_Modifiers</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Focus</Name>
+<Args/>
+<Script>			Dialog.TimedMessage("Notice", "Copied to Clipboard", 1000, MB_ICONINFORMATION);
+				iData = Input.GetText("InputImport5")
+				Clipboard.CopyText(iData);
+				--Dialog.TimedMessage("Notice", "Copied to Clipboard", 1000, MB_ICONNONE);</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>16</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Char</Name>
+<Args>number e_Char, table e_Modifiers</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Text>
+<Body>9JSPVNHTQZGZ5QkQvh2dXdWcJJEOhR0cLFmTSpUWWZnb0tCMLx0bFlmcsBlUrJiOikXZrJCLiIiOikGchJCLiQXZu5CdpNWazNXYsNmL0NXdyJiOikXYsVmciwiI0VmbuQXajl2czFGbj5CdzVnciojI0N3boJye</Body>
+<TextColor>12632256</TextColor>
+<BackgroundColor>16777215</BackgroundColor>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<Alignment>0</Alignment>
+<RightToLeftReadingOrder>0</RightToLeftReadingOrder>
+</Text>
+<Box>
+<BorderStyle>1</BorderStyle>
+<VerticalScrollbar>1</VerticalScrollbar>
+<HorizontalScrollbar>0</HorizontalScrollbar>
+<Style>0</Style>
+<Mode>1</Mode>
+<Mask/>
+<MaskSymbol> </MaskSymbol>
+<MaskRetMode>0</MaskRetMode>
+<ReadOnly>1</ReadOnly>
+</Box>
+</Object>
+<Object>
+<Type>1</Type>
+<Name>Label4</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>434</Top>
+<Bottom>457</Bottom>
+<Left>194</Left>
+<Right>340</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>5857125</DesignCodeLine>
+<DesignCodeCol>46</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1079779328</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>168640108</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1835991094</DesignCodeLine>
+<DesignCodeCol>46</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Text>
+<Body>Copy CITS configuration</Body>
+<NormalColor>8388608</NormalColor>
+<HighlightColor>8388608</HighlightColor>
+<MouseDownColor>8388608</MouseDownColor>
+<DisabledColor>12632256</DisabledColor>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<Alignment>0</Alignment>
+<Orientation>0</Orientation>
+<AutoSize>1</AutoSize>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+<OriginalRect>
+<Top>434</Top>
+<Bottom>457</Bottom>
+<Left>194</Left>
+<Right>340</Right>
+</OriginalRect>
+</Text>
+</Object>
+<Object>
+<Type>1</Type>
+<Name>Label6</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>435</Top>
+<Bottom>458</Bottom>
+<Left>356</Left>
+<Right>482</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>5857125</DesignCodeLine>
+<DesignCodeCol>46</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1079779328</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>168640108</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1835991094</DesignCodeLine>
+<DesignCodeCol>46</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Text>
+<Body>Copy CITS password</Body>
+<NormalColor>8388608</NormalColor>
+<HighlightColor>8388608</HighlightColor>
+<MouseDownColor>8388608</MouseDownColor>
+<DisabledColor>12632256</DisabledColor>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<Alignment>0</Alignment>
+<Orientation>0</Orientation>
+<AutoSize>1</AutoSize>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+<OriginalRect>
+<Top>435</Top>
+<Bottom>458</Bottom>
+<Left>356</Left>
+<Right>482</Right>
+</OriginalRect>
+</Text>
+</Object>
+<Object>
+<Type>20</Type>
+<Name>xButtonExit1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip>Backup database and exit app.   </ToolTip>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>424</Top>
+<Bottom>447</Bottom>
+<Left>544</Left>
+<Right>619</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>		xButton.SetVisible("xButtonDummy1", false);
+		xButton.SetVisible("xButtonDelete9", false);
+		xButton.SetVisible("xButtonModify8", false);
+		Image.SetVisible("ImageHourGlass4", true);
+
+My_Docs = Shell.GetFolder(SHF_MYDOCUMENTS);
+
+		-- close db connection.
+		SQLite3Connection:close()
+		SQLite3:close()
+		Application.Sleep(500);
+		-- Create a backup of db
+		Dialog.TimedMessage("Notice", "Backing up database now...", 1000, MB_ICONINFORMATION);
+		
+		File.Copy("AutoPlay\\Docs\\citsrust.db", _SourceFolder .. "\\AutoPlay\\Backup\\citsrustbak.db", true, true, false, true, BackUp01);
+		Application.Sleep(500);
+		
+		-- This duplicates the database to the app development location, so when compiling, latest DB doesn't get overwritten. (To be removed from public version of app.)
+		does_exist = File.DoesExist(_SourceDrive .. "\\SoftwareDev\\RustDeskID-project\\CD_Root\\AutoPlay\\Docs\\citsrust.db");
+			if (does_exist == true) then
+		File.Copy("AutoPlay\\Docs\\citsrust.db", _SourceDrive .. "\\SoftwareDev\\RustDeskID-project\\CD_Root\\AutoPlay\\Docs\\citsrust.db", true, true, false, true, BackUp03);
+		Application.Sleep(500);
+		Dialog.TimedMessage("Notice", "Back up of database local developers database complete.", 100, MB_ICONINFORMATION);
+		else
+		Dialog.TimedMessage("Notice", "Back up of developer database not needed.", 100, MB_ICONINFORMATION);
+		end
+				
+		-- Copy database to user's documents folder
+		File.Copy("AutoPlay\\Docs\\citsrust.db", My_Docs .. "\\citsrustbak.db", true, true, false, true, BackUp05);
+		Dialog.TimedMessage("Notice", "Back up of database to user's document folder complete.", 500, MB_ICONINFORMATION);
+		
+		Image.SetVisible("ImageHourGlass4", false);
+
+		Dialog.TimedMessage("Notice", "Exiting now...", 500, MB_ICONINFORMATION);
+		Application.Exit(eXiit);</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>34</DesignCodeLine>
+<DesignCodeCol>26</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Hyperlink</Name>
+<Args>string e_Hyperlink</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Options>
+<Text>Exit</Text>
+<TextColor format="hex">000000</TextColor>
+<EnableMarkup>0</EnableMarkup>
+<ButtonImage>AutoPlay\Images\gearsm.png</ButtonImage>
+<TextAlignment>2</TextAlignment>
+<ImageAlignment>0</ImageAlignment>
+<ImageTextRelation>3</ImageTextRelation>
+<Theme>6</Theme>
+<Style>0</Style>
+<State>0</State>
+<MouseOverSoundMode>0</MouseOverSoundMode>
+<MouseOverSound/>
+<MouseClickSoundMode>0</MouseClickSoundMode>
+<MouseClickSound/>
+</Options>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Object>
+<Object>
+<Type>1</Type>
+<Name>LabelVersion7</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>9</Top>
+<Bottom>30</Bottom>
+<Left>512</Left>
+<Right>622</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Text>
+<Body>Version: 2026.09.18a</Body>
+<NormalColor>16777215</NormalColor>
+<HighlightColor>16777215</HighlightColor>
+<MouseDownColor>16777215</MouseDownColor>
+<DisabledColor>12632256</DisabledColor>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-12</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<Alignment>0</Alignment>
+<Orientation>0</Orientation>
+<AutoSize>1</AutoSize>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+<OriginalRect>
+<Top>9</Top>
+<Bottom>30</Bottom>
+<Left>512</Left>
+<Right>622</Right>
+</OriginalRect>
+</Text>
+</Object>
+<Object>
+<Type>20</Type>
+<Name>xButtonDummy1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip>Create a dummy entry, with date of latest client entry     </ToolTip>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>341</Top>
+<Bottom>364</Bottom>
+<Left>545</Left>
+<Right>620</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>	current_date = System.GetDate(1);
+	current_time = System.GetTime(TIME_FMT_AMPM);
+    --current_date = String.ToNumber(current_date);
+
+-- local nId = Input.GetText("Input1")
+local text = Input.SetText("InputName2", " # New Client PLACEHOLDER");
+local email = Input.SetText("Input3", current_date .. " " .. current_time);
+
+
+-- Inserts a new DUMMY record into the RUSTDESK table with a text and the Rustdesk ID
+
+local text = Input.GetText("InputName2")
+local RustID = Input.GetText("Input3")
+
+SQLite3Connection:execute("INSERT INTO RUSTDESK VALUES(NULL, '"..text.."','"..RustID.."')");
+
+SearchAll();
+
+</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>9</DesignCodeLine>
+<DesignCodeCol>22</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Hyperlink</Name>
+<Args>string e_Hyperlink</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Options>
+<Text>Dummy</Text>
+<TextColor format="hex">000000</TextColor>
+<EnableMarkup>0</EnableMarkup>
+<ButtonImage/>
+<TextAlignment>2</TextAlignment>
+<ImageAlignment>0</ImageAlignment>
+<ImageTextRelation>3</ImageTextRelation>
+<Theme>6</Theme>
+<Style>0</Style>
+<State>0</State>
+<MouseOverSoundMode>0</MouseOverSoundMode>
+<MouseOverSound/>
+<MouseClickSoundMode>0</MouseClickSoundMode>
+<MouseClickSound/>
+</Options>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Object>
+<Object>
+<Type>1</Type>
+<Name>LabelSearch8</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>142</Top>
+<Bottom>165</Bottom>
+<Left>146</Left>
+<Right>194</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>5857125</DesignCodeLine>
+<DesignCodeCol>46</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1079779328</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>168640108</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1835991094</DesignCodeLine>
+<DesignCodeCol>46</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Text>
+<Body>Search:</Body>
+<NormalColor>16777215</NormalColor>
+<HighlightColor>16777215</HighlightColor>
+<MouseDownColor>16777215</MouseDownColor>
+<DisabledColor>12632256</DisabledColor>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<Alignment>0</Alignment>
+<Orientation>0</Orientation>
+<AutoSize>1</AutoSize>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+<OriginalRect>
+<Top>142</Top>
+<Bottom>165</Bottom>
+<Left>146</Left>
+<Right>194</Right>
+</OriginalRect>
+</Text>
+</Object>
+<Object>
+<Type>20</Type>
+<Name>xButton1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>0</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>0</Enabled>
+<ToolTip>Exit Rustdesk and backup DB</ToolTip>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>305</Top>
+<Bottom>328</Bottom>
+<Left>59</Left>
+<Right>134</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>local sqlite = require("luasql.sqlite3")
+local db = sqlite.open("AutoPlay\\Docs\\citsrust.db")
+local csvfile = io.open("AutoPlay\\Docs\\export_data.csv", "w")
+
+-- Write headers 
+csv_file:write("col1,col2,col3\n")
+
+-- Fetch and write data
+for row in db:rows("SELECT * FROM RUSTDESK") do
+    csvfile:write(string.format("%s,%s,%s\n", row[1], row[2], row[3]))
+end
+
+csvfile:close()
+db:close()</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>13</DesignCodeLine>
+<DesignCodeCol>10</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Hyperlink</Name>
+<Args>string e_Hyperlink</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Options>
+<Text>CSV beta</Text>
+<TextColor format="hex">000000</TextColor>
+<EnableMarkup>0</EnableMarkup>
+<ButtonImage/>
+<TextAlignment>2</TextAlignment>
+<ImageAlignment>0</ImageAlignment>
+<ImageTextRelation>3</ImageTextRelation>
+<Theme>6</Theme>
+<Style>0</Style>
+<State>0</State>
+<MouseOverSoundMode>0</MouseOverSoundMode>
+<MouseOverSound/>
+<MouseClickSoundMode>0</MouseClickSoundMode>
+<MouseClickSound/>
+</Options>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Object>
+<Object>
+<Type>3</Type>
+<Name>Image2</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>34</Top>
+<Bottom>72</Bottom>
+<Left>191</Left>
+<Right>609</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>59</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1163151692</DesignCodeLine>
+<DesignCodeCol>2708301</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1079443515</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1079189504</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<NormalImage>
+<Filename>AutoPlay\Images\rduserdb2.png</Filename>
+<UseTransColor>0</UseTransColor>
+<TransClr>16777215</TransClr>
+<TransTolerance>10</TransTolerance>
+<Opacity>100</Opacity>
+<HTMode>0</HTMode>
+</NormalImage>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+</Object>
+<Object>
+<Type>20</Type>
+<Name>xButtonHelp2</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip>Helpful tips   </ToolTip>
+<Cursor>1</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>450</Top>
+<Bottom>473</Bottom>
+<Left>545</Left>
+<Right>620</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>-- Page.Jump("Helpold");
+
+d7777 = DialogEx.Show("Help", true, 0, 0)</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>2</DesignCodeLine>
+<DesignCodeCol>37</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Hyperlink</Name>
+<Args>string e_Hyperlink</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Options>
+<Text>Help</Text>
+<TextColor format="hex">000000</TextColor>
+<EnableMarkup>0</EnableMarkup>
+<ButtonImage>AutoPlay\Images\gearsm.png</ButtonImage>
+<TextAlignment>2</TextAlignment>
+<ImageAlignment>0</ImageAlignment>
+<ImageTextRelation>3</ImageTextRelation>
+<Theme>6</Theme>
+<Style>0</Style>
+<State>0</State>
+<MouseOverSoundMode>0</MouseOverSoundMode>
+<MouseOverSound/>
+<MouseClickSoundMode>0</MouseClickSoundMode>
+<MouseClickSound/>
+</Options>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-13</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Object>
+<HGuidelines>
+<Guideline>
+<pt>708</pt>
+<locked>0</locked>
+</Guideline>
+</HGuidelines>
+<VGuidelines>
+<Guideline>
+<pt>534</pt>
+<locked>0</locked>
+</Guideline>
+</VGuidelines>
+</Page>
+<SugDialogs>
+<PageDialog width="480" height="480" dialog_title="Help" dialog_style="0" movable="1" use_custom_icon="0" custom_icon="" always_on_top="0" resizable="0" min_width="480" min_height="300" fit_custom_mask_to_window="1" custom_mask="">
+<Page>
+<Name>Help</Name>
+<InheritObs/>
+<InheritBG/>
+<Description/>
+<Keywords/>
+<Background>
+<Type>2</Type>
+<ImageStyle>0</ImageStyle>
+<TopColor>16777215</TopColor>
+<BottomColor>16737843</BottomColor>
+<UseCustomBackgroundSettings>1</UseCustomBackgroundSettings>
+<TransitionEffect/>
+<TransProps/>
+<NormalImage>
+<Filename>AutoPlay\Images\di-wallpaper2.jpg</Filename>
+</NormalImage>
+</Background>
+<Event>
+<Name>On Preload</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Show</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Close</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Timer</Name>
+<Args>number e_ID</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Audio</Name>
+<Args>number e_Channel, string e_State</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Key</Name>
+<Args>number e_Key, table e_Modifiers</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Button</Name>
+<Args>number e_Type, number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Move</Name>
+<Args>number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Wheel</Name>
+<Args>table e_Flags, number e_Delta, number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Size</Name>
+<Args>number e_WindowWidth, number e_WindowHeight, number e_DialogWidth, number e_DialogHeight, number e_Type</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Object>
+<Type>40</Type>
+<Name>Plugin1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>38</Top>
+<Bottom>442</Bottom>
+<Left>32</Left>
+<Right>448</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1163151692</DesignCodeLine>
+<DesignCodeCol>2708301</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>538994035</DesignCodeLine>
+<DesignCodeCol>2105376</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>6750218</DesignCodeLine>
+<DesignCodeCol>2708301</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<PLUGIN>
+<DLLFile>Shape\Shape.apo</DLLFile>
+<CustomData>1,0,16777215,1,0,16777215,7,7</CustomData>
+</PLUGIN>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+</Object>
+<Object>
+<Type>2</Type>
+<Name>Paragraph1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>56</Top>
+<Bottom>425</Bottom>
+<Left>51</Left>
+<Right>442</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>3158064</DesignCodeLine>
+<DesignCodeCol>2708301</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1081534464</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1163151692</DesignCodeLine>
+<DesignCodeCol>2708301</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>5832714</DesignCodeLine>
+<DesignCodeCol>1080127488</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Text>
+<Body>Helpful tips, LICENSE, Updated September 2026
+
+The Rustdesk User Database is for standalone, self-hosted Rustdesk solutions, where an accessible list of client connection information can be easily located, added to, and updated.
+
+This app should preferentially be extracted to a root drive such as, for example, C:\RustdeskID\ or F:\RustdeskID\
+ 
+When entering new user information, use only alphabetical letters. Do not use symbols or apostrophes as the SQLite database cannot accept these.
+
+After having searched and selected a client from the database, you may then click on the selected user information field (username or Rustdesk ID) and the data in that field is automatically copied to the clipboard. This then enables easier pasting into the Rustdesk client when initiating a remote connection.
+
+When closing the app using the EXIT button, the database is automatically backed-up to a backup folder. The database is also backed up to the user's document folder.
+
+The database is in SQLite3 format. After exiting the app, the database can then also be accessed by third-party utilities, such as Letos, for conversion to CSV format. The CSV format can then be saved/converted into other formats such as Excel XLSX formats, or imported into another application/program.
+
+Please note that the Rustdesk User Database app is self-signed, indicating that it was not tampered with from when originally compiled and downloaded. Please note that self-signed certificates may not be recognised by your Windows computer; however, the certificate can be added to the appropriate local certificate store on your PC to avoid false alerts.
+
+There is no need for installation of the Rustdesk User Database public version of this software which is downloaded within a ZIP archive. Please extract all files into a clean folder/directory. To mitigate or prevent data loss, consider backing up this entire folder structure to another location from time to time.
+
+There is no malware, spyware, phone-home, or data exfiltration of any sort in this application. This software app remains the property of Classic IT Support, and may not be on-sold, decompiled or reverse engineered. You are licensed to use this one one main computer.
+
+This software was created by Classic IT Support. Copyright, Classic IT Support, 2024-2026
+
+This app remains the property of Classic IT Support, and any derivatives must be suitably credited. Classic IT Support as developers affirm no liability or certainty as to the product's function.
+
+Email: support@classicit.net
+Web: https://www.classicit.net
+</Body>
+<NormalColor>0</NormalColor>
+<HighlightColor>0</HighlightColor>
+<MouseDownColor>0</MouseDownColor>
+<DisabledColor>12632256</DisabledColor>
+<BorderColor>0</BorderColor>
+<BackColor>16777215</BackColor>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-12</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<Alignment>0</Alignment>
+<TransBG>1</TransBG>
+<VSMode>0</VSMode>
+<HSMode>2</HSMode>
+<SBStyle>1</SBStyle>
+<SBSkin>WindowsOS</SBSkin>
+<Border>0</Border>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+</Text>
+</Object>
+<HGuidelines/>
+<VGuidelines/>
+</Page>
+</PageDialog>
+</SugDialogs>
+<MissingTechs>
+<DlgTitle>Missing Technologies</DlgTitle>
+<DlgMsg>This program requires the following technologies which cannot be located on your system.
+
+Please double-click on each item to find out how to install it.</DlgMsg>
+<BtnAbort>Abort</BtnAbort>
+<BtnCancel>Continue</BtnCancel>
+<BtnHelp>Help</BtnHelp>
+<ShowHelpBtn>0</ShowHelpBtn>
+<HelpURL>http://www.yourdomain.com/help.htm</HelpURL>
+</MissingTechs>
+<ProgramPrefs>
+<OutputFolder>F:\RustDeskID</OutputFolder>
+<EXEName>rustdeskid.exe</EXEName>
+<EnableAutoPlayFeatureBTF>1</EnableAutoPlayFeatureBTF>
+<EnableAutoPlayFeatureCDRW>1</EnableAutoPlayFeatureCDRW>
+<EnableAutoPlayFeatureISO>1</EnableAutoPlayFeatureISO>
+<EnableAutoPlayFeatureSFX>1</EnableAutoPlayFeatureSFX>
+<TimeStampFilesBTF>0</TimeStampFilesBTF>
+<TimeStampFilesCDRW>0</TimeStampFilesCDRW>
+<TimeStampFilesISO>0</TimeStampFilesISO>
+<ISOImageFile/>
+<SelfExtractingZIPfile>F:\Temp\rustdeskdb.exe</SelfExtractingZIPfile>
+<ZIPMessage>Loading</ZIPMessage>
+<ZIPShowProgress>1</ZIPShowProgress>
+<CDVolumeIdentifier>NEWDISC</CDVolumeIdentifier>
+<CacheFileData>1</CacheFileData>
+<UseBurnProof>1</UseBurnProof>
+<BuildType>1</BuildType>
+<DriveLetter/>
+<UsePassword>1</UsePassword>
+<OpenFolder>1</OpenFolder>
+<ObscureFilenames>1</ObscureFilenames>
+<ObscureDataFolder>citsapp</ObscureDataFolder>
+</ProgramPrefs>
+</DocumentData>
